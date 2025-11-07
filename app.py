@@ -16,7 +16,15 @@ def testing():
 def creating():
     conn = psycopg2.connect("postgresql://jinny_render_db_user:LWmku3hpecib7ktldE2aG4F7tF8SEUGa@dpg-d46pkh6r433s738c7bhg-a/jinny_render_db")
     cur = conn.cursor()
-    cur.execute('''CREATE TABLE IF NOT EXISTS Basketball( First varchar(255), Last varchar(255), City varchar(255), Name varchar(255), Number int);''')
+    cur.execute('''
+    CREATE TABLE IF NOT EXISTS Basketball(
+        First varchar(255),
+        Last varchar(255),
+        City varchar(255),
+        Name varchar(255),
+        Number int
+        );
+        ''')
     conn.commit()
     conn.close()
     return "Basketball Table Sucessfully Created"
