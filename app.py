@@ -61,5 +61,5 @@ def selecting():
         for info in player:
             response_string+="<td>{}</td>".format(info)
         response_string+="</tr>"
-    response string+="</table>"
+    response_string+="</table>"
     return response_string
